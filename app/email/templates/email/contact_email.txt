@@ -1,0 +1,12 @@
+Se ah enviado un mensaje a travez del formulario de contacto con los siguientes datos:
+      Nombre: "{{ form.name.data }}" 
+      Correo Electronico: "{{ form.email.data }}"
+      Telefono: "{{ form.phone.data }}" 
+      Motivo: "{{ form.subject.data }}" 
+      Mensaje: "{{ form.message.data }}" 
+      
+
+      
+Sinceramente,
+
+The Puyehue_APP Team

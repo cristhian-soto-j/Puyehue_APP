@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block styles %} <link rel="stylesheet" href="{{ url_for('static', filename='css/contacto2.css') }}"> {% endblock %}
+{% block content %}
+<header class="nav"  id="home">
+
+    <img src="{{ url_for('static', filename='media/logo/Ingenieria_Puyehue.png') }}" alt="Puyehue_Logo">
+    <div class="nav__container">
+        <a class="nav__container-tab" href="#home">Home</a>
+        <a class="nav__container-tab" href="#nosotros">Nosotros</a>
+        <a class="nav__container-tab" href="#servicios">Servicios</a>
+        <a class="nav__container-tab" href="#contacto">Contacto</a>
+
+        <span class="nav__container-slider"></span>
+    </div>
+</header>
+<main class="main">
+    <section class="main__slide" id="nosotros">
+      <h2>Quienes Somos</h2>
+        <p><u>Ingeniería Puyehue Ltda.</u> es empresa especializada en telecomunicaciones, con 18 años en el mercado, adquiriendo experiencia en mantención y construcción de planta externa, obras civiles, certificaciones y recepciones de red e ingeniería de detalle.</p>
+        <img class ="img_nosotros" src="{{ url_for('static', filename='media/fotos/IMG_4229.jpg') }}" alt="">
+    </section>
+    <!-- SERVICIOS -->
+    <section class="main__slide" id="servicios">
+      <div class="blog-slider">
+        <div class="blog-slider__wrp swiper-wrapper">
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{{ url_for('static', filename='media/fotos/servicios.jpg') }}" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <div class="blog-slider__title">Mantención de planta externa</div>
+              <div class="blog-slider__text">Nuestros servicios contemplan instalación, homologación y mantención de redes de transporte en redes bajas, mediana y alta capacidad sobre plataformas de fibra óptica, inalámbricas o mixtas.</div>
+            </div>
+          </div>
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{{ url_for('static', filename='media/fotos/recepcion.jpg') }}" alt="">
+
+            </div>
+            <div class="blog-slider__content">
+              <div class="blog-slider__title">Certificación recepción de redes y obras civiles</div>
+              <div class="blog-slider__text">Contemplan las recepciones de obras civiles y de redes de telecomunicaciones, certificando su funcionamiento, cumplimiento de especificaciones técnicas, definidas en el diseño.</div>
+            </div>
+          </div>
+          
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{{ url_for('static', filename='media/fotos/obras_civiles.jpg') }}" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <div class="blog-slider__title">Obras civiles</div>
+              <div class="blog-slider__text">Contamos con un departamento de obras, dirigido por ingenieros y técnicos, los cuales, se encargan de la elaboración de los proyectos de obras menores y mayores, reposición de calzada, traslado de ductos, excavaciones, entre otras cosas.
+                contamos con permiso <b>SERVIU B1</b></div>
+            </div>
+          </div>
+    
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{{ url_for('static', filename='media/fotos/ing_detalle.jpg') }}" alt="">
+
+            </div>
+            <div class="blog-slider__content">
+              <div class="blog-slider__title">Ingeniería de detalle</div>
+              <div class="blog-slider__text">Ingeniería Puyehue Ltda. cuenta con el departamento de proyectos, el cual está conformado por ingenieros con conocimientos en software técnicos, para la elaboración de planos de detalle.</div>
+            </div>
+          </div>
+    
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="{{ url_for('static', filename='media/fotos/linea.jpg') }}" alt="">
+
+            </div>
+            <div class="blog-slider__content">
+              <div class="blog-slider__title">Tendido de línea</div>
+              <div class="blog-slider__text">Nos encargamos de la instalación, construcción y mantención de fibra óptica y/o red multipar, utilizando técnicas adecuadas para cada sector, contando con el capital humano necesario para la gestión de los proyectos.</div>
+            </div>
+          </div>
+    
+        </div>
+        <div class="blog-slider__pagination"></div>
+      </div>
+
+    </section>
+    <!-- CONTACTO -->
+      <section class="main__slide" id="contacto">
+        <div class="container">
+
+          <div class="oficina-central">
+            <h3>Ubicación</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.909586136007!2d-70.6962922844198!3d-33.52973628075125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662dbc33479b475%3A0x4760ff86bf648a90!2sIngenier%C3%ADa%20Puyehue%20Ltda.!5e0!3m2!1ses-419!2scl!4v1591111279641!5m2!1ses-419!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <p>Ferrari #330, Lo Espejo</p>
+          </div>
+              
+          <div class="contacto-datos">
+            <p>Puedes contactarte con nosotros a travez de nuestro formulario</p>
+            <a href="{{ url_for('main.contacto')}}">Formulario de contacto</a>
+          </div>
+
+
+        </div>
+
+      </section>
+</main>
+
+{% endblock %}

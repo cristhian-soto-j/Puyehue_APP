@@ -1,0 +1,163 @@
+body {
+    font-family: 'Roboto Slab', serif;
+}
+a {
+    text-decoration: none;
+}
+
+.img_nosotros {
+    margin-top: 45px;
+    border-radius: 10px;
+}
+
+section p {
+    text-align: left;
+    position: relative;
+}
+
+section h2 {
+    text-align: center;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 70px;
+    color: rgb(47, 47, 47);
+    text-shadow: 0.5px 0.5px 1px #999;
+
+}
+
+#nosotros p{
+    line-height: 30px;
+}
+#nosotros h2{
+    margin-top: -75px;
+    margin-bottom: 58px;
+    font-weight: 900;
+    text-shadow: 0px 0px 0.5px #555;
+
+    background: #293ca8;
+    border: 1px solid #293ca8;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+
+}
+
+#nosotros img{
+    box-shadow: 0px 0px 4px #555;
+}
+/* 
+.ingresar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;   
+    background: #293ca8;
+    border-radius: 15px;
+    padding: 4px;
+    align-items: center;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+} 
+
+.ingresar a {
+    color: #fff;
+    text-align: center;
+
+}
+
+.ingresar a:hover {
+    font-weight: 600;
+    
+} */
+.ingresar{
+    display: none;
+}
+
+.nav, .main__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #fff;
+    text-align: center;
+    padding: 0 0.5em;
+
+
+ }
+.nav__container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+.nav__container--top {
+    position: fixed;
+    top: 0;
+}
+.nav__container-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #293ca8;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+}
+.nav__container-tab:hover {
+    color: #fff;
+    background: rgb(67, 96, 177);
+    transition: all 0.5s ease;
+}
+.nav__container-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: blue;
+    transition: left 0.5s ease;
+}
+@media (min-width: 320px) {
+    #nosotros h2{
+        margin-top: -95px;
+        margin-bottom: 15px;
+    }
+    #nosotros img{
+        margin-bottom: -30px;
+    }
+    #nosotros p{
+        margin-bottom: -30px;
+        padding: 3px;
+    }
+}
+@media (min-width: 768px) {
+    
+    .nav__container h2, .main__slide h2 {
+      font-size: 2rem;
+    }
+    .nav__container p, .main__slide p {
+      font-size: 1.3rem;
+    }
+    img {
+        width: 800px;
+    }
+    #nosotros h2{
+        margin-top: -200px;
+        margin-bottom: 80px;
+    }
+    #nosotros img{
+        margin-bottom: -200px;
+    }
+    #nosotros p{
+        margin-bottom: 50px;
+        padding: 8px;
+    }
+}

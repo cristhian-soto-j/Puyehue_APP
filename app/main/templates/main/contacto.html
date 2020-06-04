@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario.css') }}">
+    <title>Puyehue LTDA</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>&bull; ESCRIBENOS &bull;</h1>
+        <div class="underline">
+        </div>
+        <form action="" method="POST" id="contact_form" novalidate>
+          {{ form.hidden_tag() }}
+          <div class="name">
+            <label for="name"></label>
+            {{ form.name }}
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            {{ form.email }}
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="telephone">
+            <label for="telephone"></label>
+            {{ form.phone }}
+            {% for error in form.phone.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="subject">
+            <label for="subject"></label>
+       
+              {{ form.subject }}
+              {% for error in form.subject.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+            </select>
+          </div>
+          <div class="message">
+            <label for="message"></label>
+            {{ form.message }}
+            {% for error in form.message.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <div class="submit">
+            {{ form.submit() }}
+          </div>
+        </form>
+    </div>
+    <div class="logo">
+      <a href="{{ url_for('main.index')}}"><img src="{{ url_for('static', filename='media/logo/Ingenieria_Puyehue.png') }}" alt="Puyehue_Logo"></a>
+    </div>
+</body>
+</html>

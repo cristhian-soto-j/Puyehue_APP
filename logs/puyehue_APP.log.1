@@ -1,0 +1,102 @@
+2020-06-04 01:24:40,497 INFO: Puyehue APP startup [in /home/cri/Desktop/puyehue/app/__init__.py:75]
+2020-06-04 01:24:55,597 ERROR: Exception on /contact [GET] [in /home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "/home/cri/Desktop/puyehue/app/errors.py", line 7, in not_found_error
+    return render_template('404.html'), 404
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2020-06-04 01:26:27,761 INFO: ========Puyehue APP startup======== [in /home/cri/Desktop/puyehue/app/__init__.py:75]
+2020-06-04 02:23:09,580 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:75]
+2020-06-04 02:23:31,439 ERROR: Exception on /contacto [POST] [in /home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/cri/Desktop/puyehue/app/routes.py", line 33, in contacto
+    contact_email(form)
+  File "/home/cri/Desktop/puyehue/app/email.py", line 12, in contact_email
+    send_email('[Puyehue APP] Formulario de Contacto',
+  File "/home/cri/Desktop/puyehue/app/email.py", line 9, in send_email
+    mail.send(msg)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask_mail.py", line 181, in send
+    if message.has_bad_headers():
+  File "/home/cri/Desktop/puyehue/venv/lib/python3.8/site-packages/flask_mail.py", line 400, in has_bad_headers
+    headers = [self.sender, self.reply_to] + self.recipients
+TypeError: can only concatenate list (not "str") to list
+2020-06-04 10:25:37,663 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:76]
+2020-06-04 10:26:22,417 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:76]
+2020-06-04 10:38:17,449 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:76]
+2020-06-04 12:11:07,369 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:69]
+2020-06-04 12:21:35,384 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:68]
+2020-06-04 12:29:37,765 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:67]
+2020-06-04 12:33:36,969 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:66]
+2020-06-04 12:37:08,182 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:67]
+2020-06-04 12:37:38,129 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:67]
+2020-06-04 12:51:32,992 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:64]
+2020-06-04 13:12:32,163 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:64]
+2020-06-04 13:15:14,895 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:64]
+2020-06-04 13:16:13,569 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:64]
+2020-06-04 13:18:51,767 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:62]
+2020-06-04 13:19:21,787 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:62]
+2020-06-04 13:20:03,780 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:62]
+2020-06-04 13:20:57,746 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:62]
+2020-06-04 13:27:14,390 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:62]
+2020-06-04 13:31:36,694 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:00:31,498 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:03:48,964 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:07:53,365 INFO: ======== Puyehue APP startup NEWWWWWW======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:10:29,700 INFO: ======== Puyehue APP startup NEWWWWWW33333======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:11:04,625 INFO: ======== Puyehue APP startup NEWWWWWW33333======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:13:17,996 INFO: ======== Puyehue APP startup NEWWWWWW4======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:13:27,651 INFO: ======== Puyehue APP startup NEWWWWWW======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:13:36,188 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]
+2020-06-04 16:21:37,076 INFO: ======== Puyehue APP startup ======== [in /home/cri/Desktop/puyehue/app/__init__.py:61]

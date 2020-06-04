@@ -1,0 +1,120 @@
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    text-align: center;
+
+
+}
+
+.container .oficina-central{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.container .oficina-central h3{
+    margin-top: -70px;
+    margin-bottom: 20px;
+
+    text-shadow: 0px 0px 0.5px #555;
+
+    background: #293ca8;
+    border: 1px solid #293ca8;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+    
+}
+
+.container .oficina-central iframe{
+    max-width: 300px;
+    max-height: 300px;
+
+    box-shadow: 0px 0px 20px #00000023;
+    border-radius: 10px;
+
+}
+.container .oficina-central p{
+    margin: 20px;
+}
+
+
+.container .contacto-datos{
+    position: relative;
+    margin-top: -300px;
+
+}
+.container .contacto-datos p{
+    margin: 20px;
+    text-align: center;
+}
+
+
+.container .contacto-datos a{
+    border: 1.5px solid #293ca8;
+    padding: 10px;
+    border-radius: 50px;
+    color: #293ca8;
+    align-items: center;
+    font-weight: 900;
+    transition: all 500ms;
+}
+.container .contacto-datos a:hover{
+    background: #293ca8;
+    border: 1px solid #293ca8;
+    color: #fff;
+    box-shadow: 0px 0px 20px #00000074;
+
+}
+
+@media (min-width: 320px){
+    .container .oficina-central iframe{
+        max-width: 250px;
+        max-height: 250px;
+                }
+    .container .contacto-datos p{
+        display: none;
+    }
+    .container .contacto-datos{
+        margin-top: -175px;
+    }
+    .container .oficina-central p {
+        font-size: 15px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+
+}
+@media (min-width: 375px){
+    .container .oficina-central iframe{
+        max-width: 300px;
+        max-height: 300px;
+                }
+}
+
+@media (min-width: 768px){
+    .container .oficina-central iframe{
+        max-width: 400px;
+        max-height: 400px;
+                }
+    .container .contacto-datos {
+        margin-top: -320px;
+                }
+    .container .oficina-central h3{
+        font-size: 25px;
+    }
+    .container .contacto-datos p{
+        display: block;
+        margin-bottom: 40px;
+    }
+    .container .contacto-datos a{
+        font-size: 26px;
+    }
+
+                
+}
